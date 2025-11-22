@@ -1,0 +1,362 @@
+2025-11-22 18:20:30.912 [main] DEBUG o.h.i.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.boot.beanvalidation.BeanValidationIntegrator]
+2025-11-22 18:20:30.917 [main] DEBUG o.h.i.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator]
+2025-11-22 18:20:30.949 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.8.Final
+2025-11-22 18:20:30.952 [main] INFO  org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.driver_class=org.postgresql.Driver, hibernate.format_sql=true, hibernate.hbm2ddl.auto=update, hibernate.connection.password=****, hibernate.connection.username=postgres, hibernate.connection.url=jdbc:postgresql://localhost:5432/userdb, hibernate.show_sql=false, hibernate.current_session_context_class=thread}
+2025-11-22 18:20:30.998 [main] DEBUG o.h.c.i.RegionFactoryInitiator - Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+2025-11-22 18:20:30.999 [main] DEBUG o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-22 18:20:31.388 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-11-22 18:20:31.624 [main] DEBUG o.hibernate.orm.connections.pooling - Initializing Connection pool with 1 Connections
+2025-11-22 18:20:31.685 [main] DEBUG org.hibernate.orm.jdbc - HHH100017: Database:
+	name: PostgreSQL
+	version: 15.15 (Debian 15.15-1.pgdg13+1)
+	major: 15
+	minor: 15
+2025-11-22 18:20:31.685 [main] DEBUG org.hibernate.orm.jdbc - HHH100018: Driver:
+	name: PostgreSQL JDBC Driver
+	version: 42.7.8
+	major: 42
+	minor: 7
+	JDBC version: 4.2
+2025-11-22 18:20:31.733 [main] DEBUG org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: 15.15
+2025-11-22 18:20:31.754 [main] DEBUG org.hibernate.orm.jdbc.lob - HHH10010004: Disabling contextual LOB creation as Dialect reported it is not supported
+2025-11-22 18:20:31.754 [main] DEBUG org.hibernate.orm.jdbc - HHH100122: Using default JDBC fetch size: 0
+2025-11-22 18:20:31.757 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/userdb]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.15
+	Default catalog/schema: userdb/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProviderImpl
+	Minimum pool size: 1
+	Maximum pool size: 20
+2025-11-22 18:20:32.317 [main] DEBUG o.h.internal.SessionFactoryImpl - HHH000030: Instantiating factory [35fdd336-d979-41e3-a78b-797ecdb85571] with settings: {hibernate.format_sql=true, java.specification.version=17, sun.cpu.isalist=amd64, sun.jnu.encoding=Cp1251, java.class.path=C:\Users\korol\IdeaProjects\IntensiveTask2\target\classes;C:\Users\korol\.m2\repository\org\hibernate\orm\hibernate-core\7.1.8.Final\hibernate-core-7.1.8.Final.jar;C:\Users\korol\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.2.0\jakarta.persistence-api-3.2.0.jar;C:\Users\korol\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\korol\.m2\repository\org\jboss\logging\jboss-logging\3.6.1.Final\jboss-logging-3.6.1.Final.jar;C:\Users\korol\.m2\repository\org\hibernate\models\hibernate-models\1.0.1\hibernate-models-1.0.1.jar;C:\Users\korol\.m2\repository\com\fasterxml\classmate\1.7.0\classmate-1.7.0.jar;C:\Users\korol\.m2\repository\net\bytebuddy\byte-buddy\1.17.6\byte-buddy-1.17.6.jar;C:\Users\korol\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.2\jakarta.xml.bind-api-4.0.2.jar;C:\Users\korol\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.3\jakarta.activation-api-2.1.3.jar;C:\Users\korol\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.5\jaxb-runtime-4.0.5.jar;C:\Users\korol\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.5\jaxb-core-4.0.5.jar;C:\Users\korol\.m2\repository\org\eclipse\angus\angus-activation\2.0.2\angus-activation-2.0.2.jar;C:\Users\korol\.m2\repository\org\glassfish\jaxb\txw2\4.0.5\txw2-4.0.5.jar;C:\Users\korol\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\korol\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\korol\.m2\repository\org\antlr\antlr4-runtime\4.13.2\antlr4-runtime-4.13.2.jar;C:\Users\korol\.m2\repository\org\postgresql\postgresql\42.7.8\postgresql-42.7.8.jar;C:\Users\korol\.m2\repository\org\checkerframework\checker-qual\3.49.5\checker-qual-3.49.5.jar;C:\Users\korol\.m2\repository\ch\qos\logback\logback-classic\1.5.21\logback-classic-1.5.21.jar;C:\Users\korol\.m2\repository\ch\qos\logback\logback-core\1.5.21\logback-core-1.5.21.jar;C:\Users\korol\.m2\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar, java.vm.vendor=Microsoft, sun.arch.data.model=64, user.variant=, java.vendor.url=https://www.microsoft.com, user.timezone=Europe/Saratov, java.vm.specification.version=17, os.name=Windows 11, sun.java.launcher=SUN_STANDARD, user.country=RU, sun.boot.library.path=C:\Users\korol\.jdks\ms-17.0.17\bin, sun.java.command=org.example.userservice.Main, jdk.debug=release, sun.cpu.endian=little, user.home=C:\Users\korol, user.language=ru, java.specification.vendor=Oracle Corporation, java.version.date=2025-10-21, java.home=C:\Users\korol\.jdks\ms-17.0.17, file.separator=\, java.vm.compressedOopsMode=Zero based, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, hibernate.hbm2ddl.auto=update, user.script=, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=17.0.17+10-LTS, user.name=korol, path.separator=;, hibernate.connection.username=****, os.version=10.0, java.runtime.name=OpenJDK Runtime Environment, hibernate.connection.url=jdbc:postgresql://localhost:5432/userdb, file.encoding=UTF-8, hibernate.show_sql=false, java.vm.name=OpenJDK 64-Bit Server VM, java.vendor.version=Microsoft-12574423, hibernate.current_session_context_class=thread, hibernate.connection.driver_class=org.postgresql.Driver, java.vendor.url.bug=https://github.com/microsoft/openjdk/issues, java.io.tmpdir=C:\Users\korol\AppData\Local\Temp\, java.version=17.0.17, user.dir=C:\Users\korol\IdeaProjects\IntensiveTask2, os.arch=amd64, java.vm.specification.name=Java Virtual Machine Specification, hibernate.connection.password=****, sun.os.patch.level=, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@41eb94bc, native.encoding=Cp1251, java.library.path=C:\Users\korol\.jdks\ms-17.0.17\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Eclipse Adoptium\jdk-21.0.8.9-hotspot\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA App\NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\Users\korol\AppData\Local\Microsoft\WindowsApps;;., java.vendor=Microsoft, java.vm.info=mixed mode, sharing, java.vm.version=17.0.17+10-LTS, java.specification.maintenance.version=1, sun.io.unicode.encoding=UnicodeLittle, java.class.version=61.0}
+2025-11-22 18:20:32.434 [main] DEBUG org.hibernate.HQL_FUNCTIONS - Available HQL Functions:
+	abs(NUMERIC arg)
+	Double acos(NUMERIC arg)
+	Double acosh(NUMERIC arg)
+	Boolean any(BOOLEAN predicate)
+	array( ... )
+	array_agg(arg)
+	array_append( ... )
+	array_concat( ... )
+	Boolean array_contains(ARRAY haystackArray, OBJECT needleElementOrArray)
+	Boolean array_contains_nullable(ARRAY haystackArray, OBJECT needleElementOrArray)
+	array_fill(OBJECT element, INTEGER elementCount)
+	array_fill_list(OBJECT element, INTEGER elementCount)
+	array_get(ARRAY array, INTEGER index)
+	Boolean array_includes(ARRAY haystackArray, OBJECT needleArray)
+	Boolean array_includes_nullable(ARRAY haystackArray, OBJECT needleArray)
+	Boolean array_intersects(ARRAY array0, OBJECT array1)
+	Boolean array_intersects_nullable(ARRAY array0, OBJECT array1)
+	Integer array_length(ARRAY array)
+	array_list( ... )
+	Boolean array_overlaps(ARRAY array0, OBJECT array1)
+	Boolean array_overlaps_nullable(ARRAY array0, OBJECT array1)
+	Integer array_position(ARRAY array, OBJECT element[, INTEGER startPosition])
+	int[] array_positions(ARRAY array, OBJECT element)
+	List array_positions_list(ARRAY array, OBJECT element)
+	array_prepend( ... )
+	array_remove( ... )
+	array_remove_index( ... )
+	array_replace(ARRAY array, OBJECT old, OBJECT new)
+	array_set( ... )
+	array_slice(ARRAY array, INTEGER start, INTEGER end)
+	String array_to_string( ... )
+	array_trim(ARRAY array, INTEGER elementsToRemove)
+	Integer ascii(STRING arg)
+	Double asin(NUMERIC arg)
+	Double asinh(NUMERIC arg)
+	Double atan(NUMERIC arg)
+	Double atan2(NUMERIC arg0, NUMERIC arg1)
+	Double atanh(NUMERIC arg)
+	avg(arg)
+	bit_and(arg)
+	Integer bit_length(STRING_OR_CLOB arg)
+	bit_or(arg)
+	bitand(arg0, arg1)
+	bitnot(arg)
+	bitor(arg0, arg1)
+	bitxor(arg0, arg1)
+	Boolean bool_and(BOOLEAN predicate)
+	Boolean bool_or(BOOLEAN predicate)
+	cast(arg as Type)
+	Double cbrt(NUMERIC arg)
+	ceiling(NUMERIC arg)
+	Character char(INTEGER arg)
+	Integer character_length(STRING_OR_CLOB arg)
+	Character chr(INTEGER arg)
+	coalesce(arg0[, arg1[, ...]])
+	String collate(STRING string as COLLATION collation)
+	(STRING string0[, STRING string1[, ...]])
+	Double corr(NUMERIC arg0, NUMERIC arg1)
+	Double cos(NUMERIC arg)
+	Double cosh(NUMERIC arg)
+	Double cot(NUMERIC arg)
+	Long count([distinct ]{arg|*})
+	Double covar_pop(NUMERIC arg0, NUMERIC arg1)
+	Double covar_samp(NUMERIC arg0, NUMERIC arg1)
+	Double cume_dist([arg0[, ...]])
+	Date current date
+	Time current time
+	Timestamp current timestamp
+	Date current_date
+	Instant current_instant
+	Time current_time
+	Timestamp current_timestamp
+	date_trunc(STRING field, TEMPORAL datetime)
+	dateadd(TEMPORAL_UNIT field, INTEGER magnitude, TEMPORAL datetime)
+	Long|Double datediff(TEMPORAL_UNIT field, TEMPORAL start, TEMPORAL end)
+	Double degrees(NUMERIC arg)
+	Long dense_rank([arg0[, ...]])
+	Boolean every(BOOLEAN predicate)
+	Double exp(NUMERIC arg)
+	extract(TEMPORAL_UNIT field from TEMPORAL arg)
+	first_valueANY value
+	floor(NUMERIC arg)
+	String format(TEMPORAL datetime as STRING pattern)
+	greatest(COMPARABLE arg0, COMPARABLE arg1[, arg2[, ...]])
+	String hex(arg)
+	ifnull(arg0, arg1)
+	String initcap(arg)
+	String insert(STRING string, INTEGER start, INTEGER length, STRING replacement)
+	Instant instant
+	String json_array([arg0[, ...]])
+	String json_array_append(IMPLICIT_JSON arg0, STRING arg1, ANY arg2)
+	String json_array_insert(IMPLICIT_JSON arg0, STRING arg1, ANY arg2)
+	String json_arrayagg(arg0[, arg1])
+	Boolean json_exists(IMPLICIT_JSON arg0, STRING arg1)
+	String json_insert(IMPLICIT_JSON arg0, STRING arg1, ANY arg2)
+	String json_mergepatch(IMPLICIT_JSON arg0, IMPLICIT_JSON arg1[, arg2[, ...]])
+	String json_object( ... )
+	String json_objectagg(arg0, arg1[, arg2, arg3])
+	String json_query( ... )
+	String json_remove(IMPLICIT_JSON arg0, STRING arg1)
+	String json_replace(IMPLICIT_JSON arg0, STRING arg1, ANY arg2)
+	String json_set(IMPLICIT_JSON arg0, STRING arg1, ANY arg2)
+	json_value( ... )
+	lagANY value[, INTEGER offset[, ANY default]]
+	last_valueANY value
+	leadANY value[, INTEGER offset[, ANY default]]
+	least(COMPARABLE arg0, COMPARABLE arg1[, arg2[, ...]])
+	String left(STRING string, INTEGER length)
+	length
+	String listagg(STRING arg0, STRING arg1)
+	Double ln(NUMERIC arg)
+	LocalDate local date
+	LocalDateTime local datetime
+	LocalTime local time
+	LocalDate local_date
+	LocalDateTime local_datetime
+	LocalTime local_time
+	Time localtime
+	Timestamp localtimestamp
+	Integer locate(STRING pattern, STRING string[, INTEGER start])
+	Double log(NUMERIC arg0[, NUMERIC arg1])
+	Double log10(NUMERIC arg)
+	String lower(STRING string)
+	String lpad(STRING string, INTEGER length[, STRING padding])
+	String ltrim(STRING string[, STRING characters])
+	Date make_date(INTEGER arg0, INTEGER arg1, INTEGER arg2)
+	Time make_time(INTEGER arg0, INTEGER arg1, INTEGER arg2)
+	Timestamp make_timestamp(INTEGER arg0, INTEGER arg1, INTEGER arg2, INTEGER arg3, INTEGER arg4, INTEGER arg5)
+	Timestamp make_timestamptz(INTEGER arg0, INTEGER arg1, INTEGER arg2, INTEGER arg3, INTEGER arg4, INTEGER arg5[, INTEGER arg6])
+	max(COMPARABLE arg)
+	byte[] md5(arg)
+	Double median(NUMERIC arg)
+	min(COMPARABLE arg)
+	Integer mod(INTEGER arg0, INTEGER arg1)
+	mode()
+	nth_valueANY value, INTEGER nth
+	nullif(arg0, arg1)
+	Integer octet_length(STRING_OR_CLOB arg)
+	OffsetDateTime offset datetime
+	OffsetDateTime offset_datetime
+	Integer ordinal(ENUM arg)
+	String overlay(string placing replacement from start[ for length])
+	String pad(STRING string with INTEGER length {leading|trailing}[ STRING character])
+	Double percent_rank([arg0[, ...]])
+	percentile_cont(NUMERIC arg)
+	percentile_disc(NUMERIC arg)
+	Double pi
+	Integer position(STRING pattern in STRING string)
+	Double power(NUMERIC arg0, NUMERIC arg1)
+	Double radians(NUMERIC arg)
+	Long rank([arg0[, ...]])
+	Double regr_avgx(NUMERIC arg0, NUMERIC arg1)
+	Double regr_avgy(NUMERIC arg0, NUMERIC arg1)
+	Double regr_count(NUMERIC arg0, NUMERIC arg1)
+	Double regr_intercept(NUMERIC arg0, NUMERIC arg1)
+	Double regr_r2(NUMERIC arg0, NUMERIC arg1)
+	Double regr_slope(NUMERIC arg0, NUMERIC arg1)
+	Double regr_sxx(NUMERIC arg0, NUMERIC arg1)
+	Double regr_sxy(NUMERIC arg0, NUMERIC arg1)
+	Double regr_syy(NUMERIC arg0, NUMERIC arg1)
+	String repeat(STRING string, INTEGER times)
+	String replace(STRING string, STRING pattern, STRING replacement)
+	String right(STRING string, INTEGER length)
+	round(NUMERIC number[, INTEGER places])
+	Long row_number()
+	String rpad(STRING string, INTEGER length[, STRING padding])
+	String rtrim(STRING string[, STRING characters])
+	byte[] sha(arg)
+	Integer sign(NUMERIC arg)
+	Double sin(NUMERIC arg)
+	Double sinh(NUMERIC arg)
+	String soundex(arg)
+	sql
+	Double sqrt(NUMERIC arg)
+	Double stddev(NUMERIC arg)
+	Double stddev_pop(NUMERIC arg)
+	Double stddev_samp(NUMERIC arg)
+	String str(arg)
+	String string(ENUM arg)
+	String substr(STRING string, INTEGER start[, INTEGER length])
+	String substring(STRING string{ from|,} INTEGER start[{ for|,} INTEGER length])
+	sum(arg)
+	Double tan(NUMERIC arg)
+	Double tanh(NUMERIC arg)
+	timestampadd(TEMPORAL_UNIT field, INTEGER magnitude, TEMPORAL datetime)
+	Long|Double timestampdiff(TEMPORAL_UNIT field, TEMPORAL start, TEMPORAL end)
+	String to_char(ANY arg0[, STRING arg1, STRING arg2])
+	Date to_date(STRING arg0[, STRING arg1, STRING arg2])
+	Double to_number(STRING arg0[, STRING arg1, STRING arg2])
+	Timestamp to_timestamp(STRING arg0[, STRING arg1, STRING arg2])
+	String translate(STRING arg0, STRING arg1, STRING arg2)
+	String trim([[{leading|trailing|both} ][STRING arg0 ]from] STRING arg1)
+	trunc( ... )
+	truncate( ... )
+	String upper(STRING string)
+	Double var_pop(NUMERIC arg)
+	Double var_samp(NUMERIC arg)
+	Double variance(NUMERIC arg)
+	String xmlagg( ... )
+	String xmlcomment(STRING arg)
+	String xmlconcat( ... )
+	String xmlelement( ... )
+	Boolean xmlexists( ... )
+	String xmlforest( ... )
+	String xmlpi( ... )
+	String xmlquery( ... )
+
+2025-11-22 18:20:32.802 [main] DEBUG o.h.b.i.b.BytecodeProviderImpl - HHH000513: Unable to create the ReflectionOptimizer for [org.example.userservice.model.User]: private accessor [age]
+2025-11-22 18:20:33.011 [main] DEBUG o.h.s.i.SessionFactoryServiceRegistryImpl - EventListenerRegistry access via ServiceRegistry is deprecated - use 'sessionFactory.getEventEngine().getListenerRegistry()' instead
+2025-11-22 18:20:33.067 [main] DEBUG org.hibernate.mapping.Table - No alter strings for table : users
+2025-11-22 18:20:33.092 [main] DEBUG org.hibernate.orm.factoryRegistry - HHH020384: Registering SessionFactory: 35fdd336-d979-41e3-a78b-797ecdb85571 (<unnamed>)
+2025-11-22 18:20:33.137 [main] DEBUG o.h.e.t.internal.TransactionImpl - Beginning transaction
+2025-11-22 18:20:33.473 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        user_service.users u1_0
+2025-11-22 18:20:33.505 [main] DEBUG o.h.e.t.internal.TransactionImpl - Committing transaction
+2025-11-22 18:20:33.516 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+2025-11-22 18:20:33.516 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2025-11-22 18:20:33.517 [main] DEBUG o.h.internal.util.EntityPrinter - Listing entities:
+2025-11-22 18:20:33.518 [main] DEBUG o.h.internal.util.EntityPrinter - org.example.userservice.model.User{createdAt=2025-11-22T18:04:37.827249, name=newName1, id=1, age=20, email=email1}
+2025-11-22 18:20:33.518 [main] DEBUG o.h.internal.util.EntityPrinter - org.example.userservice.model.User{createdAt=2025-11-22T18:12:39.387853, name=name2, id=2, age=30, email=email2}
+2025-11-22 18:20:33.522 [main] DEBUG org.hibernate.session.metrics - HHH000401: Logging session metrics:
+	32700 ns acquiring 1 JDBC connections
+	37200 ns releasing 1 JDBC connections
+	101400 ns preparing 1 JDBC statements
+	2079200 ns executing 1 JDBC statements
+	0 ns executing 0 JDBC batches
+	0 ns performing 0 second-level cache puts
+	0 ns performing 0 second-level cache hits
+	0 ns performing 0 second-level cache misses
+	12739600 ns executing 1 flushes (flushing a total of 2 entities and 0 collections)
+	37700 ns executing 1 pre-partial-flushes
+	13900 ns executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+
+2025-11-22 18:20:41.906 [main] DEBUG o.h.e.t.internal.TransactionImpl - Beginning transaction
+2025-11-22 18:20:41.951 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        user_service.users u1_0 
+    where
+        u1_0.email=?
+2025-11-22 18:20:41.955 [main] DEBUG o.h.e.t.internal.TransactionImpl - Committing transaction
+2025-11-22 18:20:41.956 [main] DEBUG org.hibernate.session.metrics - HHH000401: Logging session metrics:
+	30200 ns acquiring 1 JDBC connections
+	24000 ns releasing 1 JDBC connections
+	90000 ns preparing 1 JDBC statements
+	1969400 ns executing 1 JDBC statements
+	0 ns executing 0 JDBC batches
+	0 ns performing 0 second-level cache puts
+	0 ns performing 0 second-level cache hits
+	0 ns performing 0 second-level cache misses
+	0 ns executing 0 flushes (flushing a total of 0 entities and 0 collections)
+	5400 ns executing 1 pre-partial-flushes
+	4500 ns executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+
+2025-11-22 18:20:41.956 [main] DEBUG o.h.e.t.internal.TransactionImpl - Beginning transaction
+2025-11-22 18:20:41.967 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        user_service.users
+        (age, created_at, email, name) 
+    values
+        (?, ?, ?, ?)
+2025-11-22 18:20:41.980 [main] DEBUG o.h.id.IdentifierGeneratorHelper - Extracted generated values for entity [org.example.userservice.model.User]: [4]
+2025-11-22 18:20:41.983 [main] DEBUG o.h.e.t.internal.TransactionImpl - Committing transaction
+2025-11-22 18:20:41.983 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2025-11-22 18:20:41.983 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2025-11-22 18:20:41.983 [main] DEBUG o.h.internal.util.EntityPrinter - Listing entities:
+2025-11-22 18:20:41.983 [main] DEBUG o.h.internal.util.EntityPrinter - org.example.userservice.model.User{createdAt=2025-11-22T18:20:41.956761900, name=name4, id=4, age=123, email=email4}
+2025-11-22 18:20:41.987 [main] DEBUG org.hibernate.session.metrics - HHH000401: Logging session metrics:
+	16700 ns acquiring 1 JDBC connections
+	29000 ns releasing 1 JDBC connections
+	172600 ns preparing 1 JDBC statements
+	2046900 ns executing 1 JDBC statements
+	0 ns executing 0 JDBC batches
+	0 ns performing 0 second-level cache puts
+	0 ns performing 0 second-level cache hits
+	0 ns performing 0 second-level cache misses
+	330100 ns executing 1 flushes (flushing a total of 1 entities and 0 collections)
+	0 ns executing 0 pre-partial-flushes
+	0 ns executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+
+2025-11-22 18:20:44.697 [main] DEBUG o.h.e.t.internal.TransactionImpl - Beginning transaction
+2025-11-22 18:20:44.703 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        user_service.users u1_0
+2025-11-22 18:20:44.706 [main] DEBUG o.h.e.t.internal.TransactionImpl - Committing transaction
+2025-11-22 18:20:44.706 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 3 objects
+2025-11-22 18:20:44.706 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2025-11-22 18:20:44.706 [main] DEBUG o.h.internal.util.EntityPrinter - Listing entities:
+2025-11-22 18:20:44.706 [main] DEBUG o.h.internal.util.EntityPrinter - org.example.userservice.model.User{createdAt=2025-11-22T18:04:37.827249, name=newName1, id=1, age=20, email=email1}
+2025-11-22 18:20:44.706 [main] DEBUG o.h.internal.util.EntityPrinter - org.example.userservice.model.User{createdAt=2025-11-22T18:12:39.387853, name=name2, id=2, age=30, email=email2}
+2025-11-22 18:20:44.706 [main] DEBUG o.h.internal.util.EntityPrinter - org.example.userservice.model.User{createdAt=2025-11-22T18:20:41.956762, name=name4, id=4, age=123, email=email4}
+2025-11-22 18:20:44.708 [main] DEBUG org.hibernate.session.metrics - HHH000401: Logging session metrics:
+	31000 ns acquiring 1 JDBC connections
+	25600 ns releasing 1 JDBC connections
+	31100 ns preparing 1 JDBC statements
+	1964400 ns executing 1 JDBC statements
+	0 ns executing 0 JDBC batches
+	0 ns performing 0 second-level cache puts
+	0 ns performing 0 second-level cache hits
+	0 ns performing 0 second-level cache misses
+	440500 ns executing 1 flushes (flushing a total of 3 entities and 0 collections)
+	7900 ns executing 1 pre-partial-flushes
+	3300 ns executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+
+2025-11-22 18:20:46.610 [main] DEBUG o.h.internal.SessionFactoryImpl - HHH000031: Closing factory [35fdd336-d979-41e3-a78b-797ecdb85571]
+2025-11-22 18:20:46.612 [main] DEBUG o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/userdb]

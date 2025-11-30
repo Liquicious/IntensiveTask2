@@ -15,6 +15,10 @@ public class UserService {
         this.userDao = new UserDao();
     }
 
+    public UserService(UserDao userDao) {
+        this.userDao = userDao;
+    }
+
     public Long createUser(String name, String email, Integer age) {
         if (name == null || name.trim().isEmpty()) {
             throw new IllegalArgumentException("Name cannot be empty");

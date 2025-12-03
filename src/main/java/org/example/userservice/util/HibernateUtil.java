@@ -10,8 +10,29 @@ import org.example.userservice.model.User;
 public class HibernateUtil {
     private static SessionFactory sessionFactory;
 
+//    public static SessionFactory getSessionFactory() {
+//        if (sessionFactory == null) {
+//            try {
+//                StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
+//                        .build();
+//
+//                MetadataSources sources = new MetadataSources(registry)
+//                        .addAnnotatedClass(User.class);
+//
+//                Metadata metadata = sources.getMetadataBuilder().build();
+//                sessionFactory = metadata.getSessionFactoryBuilder().build();
+//
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//                throw new RuntimeException("Failed to create SessionFactory", e);
+//            }
+//        }
+//        return sessionFactory;
+//    }
+
     public static SessionFactory getSessionFactory() {
         if (sessionFactory == null) {
+            //System.out.println("Creating new SessionFactory");
             try {
                 StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
                         .build();
@@ -26,8 +47,19 @@ public class HibernateUtil {
                 e.printStackTrace();
                 throw new RuntimeException("Failed to create SessionFactory", e);
             }
+        } else if (sessionFactory.isClosed()) {
+            //System.out.println("SessionFactory was closed, recreating...");
+            sessionFactory = null;
+            return getSessionFactory();
         }
         return sessionFactory;
+    }
+
+    public static void resetSessionFactory() {
+        if (sessionFactory != null) {
+            sessionFactory.close();
+            sessionFactory = null;
+        }
     }
 
     public static void shutdown() {

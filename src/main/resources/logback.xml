@@ -16,7 +16,8 @@
 
 
     <logger name="org.example.userservice" level="INFO" additivity="false">
-        <appender-ref ref="CONSOLE"/>
+        <!-- <appender-ref ref="CONSOLE"/> -->
+        <appender-ref ref="LOG_FILE"/>
     </logger>
 
     <logger name="org.hibernate" level="DEBUG" additivity="false">

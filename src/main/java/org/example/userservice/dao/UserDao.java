@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 import java.util.List;
 import java.util.Optional;
 
-public class UserDao {
+public class UserDao implements UserDaoInterface {
     private static final Logger logger = LoggerFactory.getLogger(UserDao.class);
 
     public Long save(User user) {

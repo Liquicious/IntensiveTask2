@@ -28,42 +28,42 @@ public class UserService {
 
     private void validateName(String name) {
         if (name == null || name.trim().isEmpty()) {
-            throw new IllegalArgumentException("Имя не может быть пустым");
+            throw new IllegalArgumentException("Name cannot be empty");
         }
 
         String trimmedName = name.trim();
         // Проверка длины
         if (trimmedName.length() < 2 || trimmedName.length() > 100) {
             throw new IllegalArgumentException(
-                    "Имя должно содержать от 2 до 100 символов. Получено: " + trimmedName.length()
+                    "Name must contain between 2 and 100 characters. Received: " + trimmedName.length()
             );
         }
 
         // Проверка на допустимые символы
         if (!NAME_PATTERN.matcher(trimmedName).matches()) {
             throw new IllegalArgumentException(
-                    "Имя может содержать только буквы, пробелы, дефисы и апострофы. Некорректное имя: " + name
+                    "Name can only contain letters, spaces, hyphens and apostrophes. Invalid name: " + name
             );
         }
     }
 
     private void validateEmail(String email) {
         if (email == null || email.trim().isEmpty()) {
-            throw new IllegalArgumentException("Email не может быть пустым");
+            throw new IllegalArgumentException("Email cannot be empty");
         }
 
         String trimmedEmail = email.trim().toLowerCase();
         // Проверка длины
         if (trimmedEmail.length() > 255) {
             throw new IllegalArgumentException(
-                    "Email слишком длинный. Максимум 255 символов"
+                    "Email is too long. Maximum length is 255 characters"
             );
         }
 
         // Проверка формата email
         if (!EMAIL_PATTERN.matcher(trimmedEmail).matches()) {
             throw new IllegalArgumentException(
-                    "Некорректный формат email. Пример: user@example.com. Получено: " + email
+                    "Invalid email format. Example: user@example.com. Received: " + email
             );
         }
     }
@@ -71,29 +71,29 @@ public class UserService {
     private void validateAge(Integer age) {
         if (age == null) {
             throw new IllegalArgumentException(
-                    "Возраст не может быть пустым.");
+                    "Age cannot be null");
         }
 
         if (age < 0) {
             throw new IllegalArgumentException(
-                    "Возраст не может быть отрицательным. Получено: " + age
+                    "Age cannot be negative. Received: " + age
             );
         }
 
         if (age > 120) {
             throw new IllegalArgumentException(
-                    "Возраст не может превышать 120 лет. Получено: " + age
+                    "Age cannot exceed 120 years. Received: " + age
             );
         }
     }
 
     private void validateId(Long id) {
         if (id == null) {
-            throw new IllegalArgumentException("ID не может быть null");
+            throw new IllegalArgumentException("ID cannot be null");
         }
 
         if (id <= 0) {
-            throw new IllegalArgumentException("ID должен быть положительным числом");
+            throw new IllegalArgumentException("ID must be a positive number");
         }
     }
 

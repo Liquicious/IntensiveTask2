@@ -296,7 +296,7 @@
 2025-12-03 13:05:31.314 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
 2025-12-03 13:05:31.315 [main] DEBUG o.h.internal.util.EntityPrinter - Listing entities:
 2025-12-03 13:05:31.316 [main] DEBUG o.h.internal.util.EntityPrinter - org.example.userservice.model.User{createdAt=2025-12-03T13:05:31.274964600, name=qwe, id=1, age=11, email=qwe@qwe.qwe}
-2025-12-03 13:05:31.320 [main] INFO  org.example.userservice.dao.UserDao - User saved successfully: Name-qwe, Email-qwe@qwe.qwe
+2025-12-03 13:05:31.320 [main] INFO  org.example.userservice.dao.UserDaoImpl - User saved successfully: Name-qwe, Email-qwe@qwe.qwe
 2025-12-03 13:05:31.320 [main] DEBUG org.hibernate.session.metrics - HHH000401: Logging session metrics:
 	22600 ns acquiring 1 JDBC connections
 	24900 ns releasing 1 JDBC connections
@@ -1050,7 +1050,7 @@
         name=? 
     where
         id=?
-2025-12-03 13:13:44.782 [main] INFO  org.example.userservice.dao.UserDao - User updated successfully: qwe2@qwe.qwe
+2025-12-03 13:13:44.782 [main] INFO  org.example.userservice.dao.UserDaoImpl - User updated successfully: qwe2@qwe.qwe
 2025-12-03 13:13:44.783 [main] DEBUG org.hibernate.session.metrics - HHH000401: Logging session metrics:
 	12800 ns acquiring 1 JDBC connections
 	32300 ns releasing 1 JDBC connections

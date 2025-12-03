@@ -38,7 +38,7 @@ class UserDaoIntegrationTest {
         System.setProperty("hibernate.connection.password", postgres.getPassword());
 
         sessionFactory = HibernateUtil.getSessionFactory();
-        userDao = new UserDao();
+        userDao = new UserDaoImpl();
     }
 
     @BeforeEach

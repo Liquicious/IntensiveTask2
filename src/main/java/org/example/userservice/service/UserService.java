@@ -1,7 +1,7 @@
 package org.example.userservice.service;
 
+import org.example.userservice.dao.UserDaoImpl;
 import org.example.userservice.dao.UserDao;
-import org.example.userservice.dao.UserDaoInterface;
 import org.example.userservice.model.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
 
 public class UserService {
     private static final Logger logger = LoggerFactory.getLogger(UserService.class);
-    private final UserDaoInterface userDao;
+    private final UserDao userDao;
 
     private static final Pattern EMAIL_PATTERN =
             Pattern.compile("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$");
@@ -19,7 +19,7 @@ public class UserService {
             Pattern.compile("^[a-zA-Zа-яА-ЯёЁ\\s\\-']{2,100}$");
 
     public UserService() {
-        this.userDao = new UserDao();
+        this.userDao = new UserDaoImpl();
     }
 
     public UserService(UserDao userDao) {

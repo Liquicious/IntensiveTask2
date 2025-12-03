@@ -1,6 +1,6 @@
 package org.example.userservice.util;
 
-import org.example.userservice.dao.UserDao;
+import org.example.userservice.dao.UserDaoImpl;
 import org.example.userservice.model.User;
 
 public class DebugSessionFactory {
@@ -17,7 +17,7 @@ public class DebugSessionFactory {
 
     static void testNormalFlow() {
         try {
-            UserDao dao = new UserDao();
+            UserDaoImpl dao = new UserDaoImpl();
             dao.save(new User("Normal", "normal@test.com", 25));
             System.out.println("✓ Normal flow works");
         } catch (Exception e) {
@@ -29,7 +29,7 @@ public class DebugSessionFactory {
         HibernateUtil.shutdown();
 
         try {
-            UserDao dao = new UserDao();
+            UserDaoImpl dao = new UserDaoImpl();
             dao.save(new User("Closed", "closed@test.com", 30));
             System.out.println("✗ Should have failed but didn't!");
         } catch (Exception e) {
